@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+}
+
+header {
+  background-image: url("./images/image-header-mobile.jpg");
+}
+.container {
+  margin-top: 50px;
+}
+.row {
+  background-color: hsl(244, 38%, 16%);
+  margin: 15px;
+}
+.word-color {
+  color: hsl(277, 64%, 61%);
+}
+
+.main-text {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  font-size: 26px;
+}
+.img-container {
+  position: relative;
+}
+
+.img-container::after {
+  content: ""; /* Add content to pseudo-elements (required) */
+  position: absolute; /* Set position to absolute to position the pseudo-elements */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 83.5%;
+  background-color: rgba(
+    104,
+    19,
+    154,
+    0.596
+  ); /* RGBA color with alpha for transparency */
+  pointer-events: none; /* Allow clicks to pass through the pseudo-elements */
+  z-index: 1; /* Place the pseudo-elements above the image (if needed) */
+}
+
+@media (min-width: 800px) {
+  .container {
+    margin-top: 0;
+    width: 70%;
+  }
+  h1 {
+    font-size: 34px;
+    padding-right: 70px;
+  }
+
+  .row {
+    margin: 0;
+  }
+  .main-text {
+    padding-right: 90px;
+    font-size: 14px;
+    margin-bottom: 4rem;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .three-cols {
+    letter-spacing: 1px;
+  }
+  .three-cols * {
+    padding: 0;
+  }
+  .img-container::after {
+    content: ""; /* Add content to pseudo-elements (required) */
+    position: absolute; /* Set position to absolute to position the pseudo-elements */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the pseudo-elements cover the entire container horizontally */
+    height: 100%; /* Make the pseudo-elements cover the entire container vertically */
+    background-color: rgba(
+      104,
+      19,
+      154,
+      0.596
+    ); /* RGBA color with alpha for transparency */
+    pointer-events: none; /* Allow clicks to pass through the pseudo-elements */
+    z-index: 1; /* Place the pseudo-elements above the image (if needed) */
+  }
+}
